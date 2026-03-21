@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} | Portal Web</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Programación I · MVP Login</p>
+        <h1>Portal de Registro y Bienvenida</h1>
+      </div>
+      <nav>
+        <a href="/">Registro</a>
+        <a href="/login">Login</a>
+        {{#if currentUser}}
+          <form action="/logout" method="post" class="inline-form">
+            <button type="submit" class="link-button">Salir</button>
+          </form>
+        {{/if}}
+      </nav>
+    </header>

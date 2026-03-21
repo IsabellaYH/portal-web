@@ -1,0 +1,25 @@
+{{> header}}
+<main class="page-container">
+<section class="card welcome-card">
+  <p class="section-label">Bienvenida</p>
+  <h2>¡Bienvenido/a {{user.name}}!</h2>
+  <p>Tu registro fue guardado en la base de datos y tu sesión quedó iniciada correctamente.</p>
+
+  {{#if (hasAvatar user.avatarPath)}}
+    <img src="{{user.avatarPath}}" alt="Avatar de {{user.name}}" class="avatar" />
+  {{/if}}
+
+  <dl class="user-data">
+    <div>
+      <dt>Nombre</dt>
+      <dd>{{user.name}}</dd>
+    </div>
+    <div>
+      <dt>Email</dt>
+      <dd>{{user.email}}</dd>
+    </div>
+  </dl>
+</section>
+
+</main>
+{{> footer}}

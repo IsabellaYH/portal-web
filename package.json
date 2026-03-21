@@ -1,0 +1,26 @@
+{
+  "name": "portal-web",
+  "version": "1.0.0",
+  "description": "Portal MVP con registro, login, Express, Handlebars y SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "handlebars",
+    "sqlite",
+    "multer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "hbs": "^4.2.0",
+    "multer": "^1.4.5-lts.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}

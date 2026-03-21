@@ -1,0 +1,25 @@
+{{> header}}
+<main class="page-container">
+<section class="card narrow-card">
+  <p class="section-label">Ingreso</p>
+  <h2>Accedé a tu cuenta</h2>
+
+  <form action="/login" method="post" class="auth-form">
+    {{#if error}}<p class="alert error">{{error}}</p>{{/if}}
+
+    <label>
+      Email
+      <input type="email" name="email" value="{{formData.email}}" placeholder="fulanito@email.com" required />
+    </label>
+
+    <label>
+      Contraseña
+      <input type="password" name="password" placeholder="Tu contraseña" required />
+    </label>
+
+    <button type="submit">Ingresar</button>
+  </form>
+</section>
+
+</main>
+{{> footer}}

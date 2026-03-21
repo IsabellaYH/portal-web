@@ -1,0 +1,46 @@
+{{> header}}
+<main class="page-container">
+<section class="card two-columns">
+  <div>
+    <p class="section-label">Pantalla principal</p>
+    <h2>Registrá tu usuario</h2>
+    <p>
+      Este MVP conecta el formulario con el servidor Express, guarda los datos en SQLite y luego muestra una bienvenida personalizada.
+    </p>
+    <ul class="feature-list">
+      <li>Registro persistente en base de datos.</li>
+      <li>Subida opcional de avatar con validación.</li>
+      <li>Vista de bienvenida con el nombre cargado.</li>
+      <li>Acceso posterior desde la pantalla de login.</li>
+    </ul>
+  </div>
+
+  <form action="/register" method="post" enctype="multipart/form-data" class="auth-form">
+    {{#if error}}<p class="alert error">{{error}}</p>{{/if}}
+
+    <label>
+      Nombre completo
+      <input type="text" name="name" value="{{formData.name}}" placeholder="Fulanito Pérez" required />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" value="{{formData.email}}" placeholder="fulanito@email.com" required />
+    </label>
+
+    <label>
+      Contraseña
+      <input type="password" name="password" placeholder="Mínimo una contraseña segura" required />
+    </label>
+
+    <label>
+      Avatar opcional
+      <input type="file" name="avatar" accept=".jpg,.jpeg,.png,.webp" />
+    </label>
+
+    <button type="submit">Crear cuenta</button>
+  </form>
+</section>
+
+</main>
+{{> footer}}
